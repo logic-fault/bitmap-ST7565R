@@ -10,16 +10,16 @@
      2) Run bitmap-ST7565R.py with appropriate arguments 
      3) Include the generated header file in your project
      4) Access the output array in a two dimenional manner : graphics_lcdmap[PAGE_NUMBER][COLUMN_NUMBER]
-	    
+       
 
-	Example
-	   Say I wanted to create a picture of a trashcan and build a bitmap to use. I would do the following:
-	   1) create a 128x64 bit bitmap in mspaint or whatever editor I please. Save to C:\img\trash.bmp
-	   2) Run the program: python bitmap-ST7565.py C:\img\trash.bmp C:\src\great_project\trash.h
-	   3) Include the trash file in the project: #include "trash.h"
-	   4) Access the output array: 
-	      for (int page = 0; page < 8; page++)
-             for (int col = 0; col < 128; col++)
-			    lcd_write_graphics(page, col, graphics_trash[page][col]);
-		  
-		  
+   Example
+      Say I wanted to create a picture of a trashcan and build a bitmap to use. I would do the following:
+      1) create a 128x64 bit bitmap in mspaint or whatever editor I please. Save to C:\img\trash.bmp
+      2) Run the program: python bitmap-ST7565.py C:\img\trash.bmp C:\src\great_project\trash.h
+      3) Include the trash file in the project: #include "trash.h"
+      4) Access the output array: 
+         for (int page = 0; page < 8; page++)
+            for (int col = 0; col < 128; col++)
+               lcd_write_graphics(page, col, graphics_trash[page][col]);
+        
+        
