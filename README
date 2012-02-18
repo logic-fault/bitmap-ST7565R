@@ -6,7 +6,7 @@
    Use
      1) Create a black & white bitmap of the same dimensions as the LCD screen in question
            128 x 64 for dogm-128 modules
-           Demark a dot on the bitmap by
+           Demark a dot on the bitmap by writing a black dot in the appropriate pixel
      2) Run bitmap-ST7565R.py with appropriate arguments 
      3) Include the generated header file in your project
      4) Access the output array in a two dimenional manner : graphics_lcdmap[PAGE_NUMBER][COLUMN_NUMBER]
