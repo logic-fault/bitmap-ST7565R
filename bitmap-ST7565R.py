@@ -55,8 +55,9 @@ if size[1] < screen_pages * bits_high_per_page:
 elif size[1] > screen_pages * bits_high_per_page:
    print "Warning: truncating image height from " + str(size[1]) +  "px to " + str(screen_pages * bits_high_per_page) + "px ."
    
-#clip image to size
+#clip image to size, ensure rgb mode
 im = im.crop( [0, 0, screen_columns, screen_pages * bits_high_per_page])
+im = im.convert("L")
 
 # load the pixel data into an array object
 pix=im.getdata()
@@ -83,6 +84,8 @@ for page in range(screen_pages):
 accessor_str += " };"
 header_out.write(accessor_str + "\n")
 header_out.write("#endif /* " + header_def + " */ \n")
+
+print "Conversion success!"
    
    
 
