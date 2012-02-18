@@ -1,18 +1,18 @@
--- Requirements 
----- Python 2.7
----- Python Imaging Library
---------- http://www.pythonware.com/products/pil/
+   Requirements 
+     Python 2.7
+     Python Imaging Library
+        - http://www.pythonware.com/products/pil/
 
--- Use
----- 1) Create a black & white bitmap of the same dimensions as the LCD screen in question
----------- 128 x 64 for dogm-128 modules
----------- Demark a dot on the bitmap by
----- 2) Run bitmap-ST7565R.py with appropriate arguments 
----- 3) Include the generated header file in your project
----- 4) Access the output array with the knowledge that each byte is stored in the following order for 128 column screens:
-----------(Page0 column0)....(Page0 column127),(Page1 column0) ......(Page1 column127)......
------------Example: graphics[129] = byte for page 1, column 1
------------         graphics[256] = byte for page 2, column 0
------------         graphics[N]   = byte for page N / 128, column N mod 128
+   Use
+     1) Create a black & white bitmap of the same dimensions as the LCD screen in question
+           128 x 64 for dogm-128 modules
+           Demark a dot on the bitmap by
+     2) Run bitmap-ST7565R.py with appropriate arguments 
+     3) Include the generated header file in your project
+     4) Access the output array with the knowledge that each byte is stored in the following order for 128 column screens:
+          (Page0 column0)....(Page0 column127),(Page1 column0) ......(Page1 column127)......
+           Example: graphics[129] = byte for page 1, column 1
+                    graphics[256] = byte for page 2, column 0
+                    graphics[N]   = byte for page N / 128, column N mod 128
 		  
 		  
